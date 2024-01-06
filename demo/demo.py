@@ -162,7 +162,7 @@ def generate_results(audio: np.ndarray, num_repetitions: int, top_p: float):
     sr = 48_000
     # make it so that it is 4 seconds long
     if len(y) < (sr * 4):
-        raise gr.Error("Please record at least 4 second of audio")
+        raise gr.Error("Please record at least 4 seconds of audio")
     if num_repetitions is None or num_repetitions <= 0 or num_repetitions > 10:
         raise gr.Error(
             f"Invalid number of samples: {num_repetitions}. Please specify a number between 1-10"
